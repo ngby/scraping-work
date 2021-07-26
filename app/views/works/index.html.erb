@@ -1,0 +1,11 @@
+<h1>スクレイピングの仕事をスクレイピングします</h1>
+<h2>ココナラ</h2>
+<ul>
+<% for i in 0..@kokonara[:title].length-1 do %>
+  <% @kokonara.each do |key , value| %>
+    <li>
+      <%= value[i] %>
+    </li>
+    <% end %>
+  <% end %>
+</ul>
