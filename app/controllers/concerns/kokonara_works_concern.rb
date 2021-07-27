@@ -18,9 +18,11 @@ def set_kokonara_works(url,titleCss,rewardCss,rivalCss,limitCss)
   reward = []
   rival =[]
   limit = []
+  url = []
 
   doc.css(titleCss).each do |link|
     title << link.text.gsub(" ", "") 
+    url << link[:href]
   end
 
   doc.css(rewardCss).each do |link|
@@ -37,6 +39,7 @@ def set_kokonara_works(url,titleCss,rewardCss,rivalCss,limitCss)
 
   @kokonara = {
     title: title,
+    url: url,
     reward: reward,
     rival: rival,
     limit: limit

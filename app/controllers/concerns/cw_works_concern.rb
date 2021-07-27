@@ -15,10 +15,12 @@ module CwWorksConcern
       doc = Nokogiri::HTML.parse(html, nil, charset)
     
       title = []
+      url = []
       reward = []
     
       doc.css(titleCss).each do |link|
         title << link.text.gsub(" ", "") 
+        url << link[:href]
       end
     
       doc.css(rewardCss).each do |link|
@@ -27,6 +29,7 @@ module CwWorksConcern
       
       @cw = {
         title: title,
+        url: url,
         reward: reward
       }
     end

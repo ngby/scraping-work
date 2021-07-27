@@ -1,11 +1,26 @@
 <h1>スクレイピングの仕事をスクレイピングします</h1>
 <h2>ココナラ</h2>
-<ul>
 <% for i in 0..@kokonara[:title].length-1 do %>
-  <% @kokonara.each do |key , value| %>
-    <li>
-      <%= value[i] %>
-    </li>
-    <% end %>
-  <% end %>
-</ul>
+<h3>
+  <%= link_to @kokonara[:title][i] , @kokonara[:url][i]%>
+</h3>
+<p>
+  <%= @kokonara[:reward][i]%>
+</p>
+<p>
+  <%= @kokonara[:rival][i]%>
+</p>
+<p>
+  <%= @kokonara[:limit][i]%>
+</p>
+<% end %>
+
+<h2>クラウドワークス</h2>
+<% for i in 0..@cw[:title].length-1 do %>
+<h3>
+  <%= link_to @cw[:title][i] , @cw[:url][i]%>
+</h3>
+<p>
+  <%= @cw[:reward][i]%>
+</p>
+<% end %>
