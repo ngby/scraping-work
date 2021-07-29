@@ -17,10 +17,10 @@
 
 <h2>クラウドワークス</h2>
 <% for i in 0..@cw[:title].length-1 do %>
-<h3>
-  <%= link_to @cw[:title][i] , @cw[:url][i]%>
-</h3>
-<p>
-  <%= @cw[:reward][i]%>
-</p>
+  <h3>
+    <%= link_to @cw[:title][i] , @cw[:url][i]%>
+  </h3>
+  <p>
+    <%= @cw[:reward][i]%>
+  </p>
 <% end %>

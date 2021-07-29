@@ -20,7 +20,7 @@ module CwWorksConcern
     
       doc.css(titleCss).each do |link|
         title << link.text.gsub(" ", "") 
-        url << link[:href]
+        url << "https://crowdworks.jp/#{link[:href]}"
       end
     
       doc.css(rewardCss).each do |link|
