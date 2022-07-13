@@ -1,0 +1,15 @@
+<h2>ココナラ</h2>
+<% for i in 0..@kokonara[:title].length-1 do %>
+<h3>
+  <%= link_to @kokonara[:title][i] , @kokonara[:url][i]%>
+</h3>
+<p>
+  <%= @kokonara[:reward][i]%>
+</p>
+<p>
+  <%= @kokonara[:rival][i]%>
+</p>
+<p>
+  <%= @kokonara[:limit][i]%>
+</p>
+<% end %>

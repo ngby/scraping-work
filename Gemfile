@@ -14,6 +14,8 @@ end
 group :production do
   gem 'pg',  '1.1'
 end
+
+gem 'tailwindcss-rails'
 # Use Puma as the app server
 gem 'puma', '~> 5.0'
 # Use SCSS for stylesheets
